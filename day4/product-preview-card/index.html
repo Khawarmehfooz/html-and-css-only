@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+    :root{
+      --primary-1:hsl(158, 36%, 37%);
+      --primary-2:hsl(30, 38%, 92%);
+      --color-1:hsl(212, 21%, 14%);
+      --color-2:hsl(228, 12%, 48%);
+      --color-3:hsl(0, 0%, 100%);
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      height: 100vh;
+      background-color: var(--primary-2);
+      overflow: hidden;
+    }
+    #container{
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #main{
+      height: 23rem;
+      width: 30rem;
+      display: flex;
+      /* justify-content: flex-end; */
+      border-radius: 5px;
+      background-color: var(--color-3);
+      
+    }
+    .perfume-img{
+      position: relative;
+      height: 23rem;
+      border-radius: 5px 0 0 5px;
+    }
+    .details{
+      position: relative;
+      padding: 10px 10px 0 20px;
+      font-family:'Montserrat', sans-serif ;
+      
+    }
+    #title{
+      position: relative;
+      padding-left: 5px;
+      font-size: 1.8rem;
+      line-height:1;
+      color: var(--color-1);
+      margin: 0;
+      font-weight: 700;
+      font-family: 'Fraunces', serif;
+    }
+    #price{
+      position: relative;
+      font-size: 2rem;
+      font-weight: 800;
+      font-family: 'Fraunces', serif;
+    }
+    #sale-price{
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--color-2);
+      
+    }
+    #cart{
+      background-color:var(--primary-1);
+      border: none;
+      text-align: center;
+      align-items: center;
+      height: 2.2rem;
+      width: 12rem;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Montserrat', sans-serif;
+      border-radius:5px ;
+      color: var(--primary-2);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn{
+      display: flex;
+      padding-top: 20px;
+    }
+    p{
+      font-size: 14px;
+      color: var(--color-2);
+    }
+    #svg-logo{
+      margin-right: 5px;
+    }
+    .attribution{
+      text-align: center;
+      position: relative;
+    }
+    @media(max-width:540px){
+      #main{
+        height: 40rem;
+        width: 25rem;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .perfume-img{
+        position: relative;
+        width: 25rem;
+        height: 20rem;
+        object-fit: cover;
+        margin: 0;
+        border-radius: 0;
+      }
+      .btn{
+        padding-top: 25px;
+      }
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <main id="container">
+    <section id="main">
+      <div class="img-div">
+        <img class="perfume-img" src="/images/image-product-desktop.jpg" alt="">
+      </div>
+      <div class="details">
+        <p>Perfume</p>
+        <h3 id="title">Gabrielle Essence Eau De Parfum</h3>
+        <p id="desc"> A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+        <span id="price">$149.99</span>
+        <span id="sale-price"><strike>169.99</strike></span>
+        <div class="btn">
+          <button id="cart"><img id="svg-logo" src="/images/icon-cart.svg" alt="">Add to Cart</button>
+        </div> 
+      </div>
+    </section>
+  </main>
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://khawarmehfooz.com">Khawar Mehfooz</a>.
+</div>
+</body>
+</html>
